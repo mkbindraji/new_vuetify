@@ -1,18 +1,19 @@
-// src/router.js
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from './views/HomePage.vue'
-import About from './views/AboutPage.vue'
+import DashboardPage from './views/DashboardPage.vue'
+import ProjectsPage from './views/ProjectsPage.vue'
+import TeamPage from './views/TeamPage.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/about', component: About },
+  { path: '/', name: 'dashboardPage', component: DashboardPage },
+  { path: '/projects', name: 'projectsPage', component: ProjectsPage },
+  { path: '/team', name: 'teamPage', component: TeamPage },
 ]
 
 const router = new VueRouter({
-  mode: 'history', // Use HTML5 history mode
+  model: 'history',
   routes
 })
 
